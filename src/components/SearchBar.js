@@ -14,8 +14,9 @@ class SearchBar extends Component{
         //using setState allows us to maintain continutity. while react does a shit tone with the state Object
         return (
         <div>
-            <input onChange={(event) => this.setState({term: event.target.value})} value={this.state.term}>
-            
+            <input 
+                value={this.state.term}
+                onChange={(event) => this.setState({term: event.target.value})}>
             </input>
             {/* Value of the Input: {this.state.term} */}
         </div>

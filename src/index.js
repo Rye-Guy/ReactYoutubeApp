@@ -4,6 +4,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import SearchBar from './components/SearchBar';
 import VideoList from './components/videoList';
+import VideoDetail from './components/videoDetail';
 import YTSearch from 'youtube-api-search';
 
 // Create a new component that generates some HTML
@@ -18,12 +19,16 @@ class App extends Component{
     YTSearch({key: API_KEY, term: 'skateboards'}, (videos) =>{
         this.setState({videos});
     });
+
+
   }
   
     render(){
+        
         return (
             <div>
                 <SearchBar></SearchBar>
+                <VideoDetail video={this.state.videos[0]}></VideoDetail>
                 <VideoList videos={this.state.videos}></VideoList>
             </div>
         );
