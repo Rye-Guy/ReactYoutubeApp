@@ -30,3 +30,8 @@ width: 75%;
 li{
     list-style-type: none;
 }
+
+.media-body{
+    font-size: 18px;
+    display: initial !important;
+}
